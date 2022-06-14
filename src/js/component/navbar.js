@@ -8,15 +8,15 @@ export const Navbar = () => {
   			<div className="container">
    			 <a className="navbar-brand" href="#">
       <img src={NavLogo} alt="" width="95" className="d-inline-block m-0"/>
-    </a><div class="dropdown">
-  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    </a><div className="dropdown">
+  <a className="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Favorites
   </a>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a className="dropdown-item" href="#">Action</a></li>
+    <li><a className="dropdown-item" href="#">Another action</a></li>
+    <li><a className="dropdown-item" href="#">Something else here</a></li>
   </ul>
 </div>
   </div>

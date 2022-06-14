@@ -7,16 +7,48 @@ import Details from "../component/Details.jsx";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [dataI, setDataI] = useState({})
+
+	const {theid} = useParams();
+
+	useEffect(()=>{
+		actions.getOnePeople(theid)
+	})
+
+	console.log({store});
 	return (
 		
-		<>
-
-			{/* <h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1> */}
-
-
-			<Details />
-			
-		</>
+		<div className="container py-4">
+		<div className="row">
+			<img src="https://via.placeholder.com/800x600" alt="" className="col-6"/>
+			<div className="col-6">
+			<h2 className="text-center">{store.dataI.result}</h2> 
+			{/* seguir aquí */}
+			<p className="text-center">{store.dataI.description}</p>
+			</div>
+		</div>
+		<hr className="text-danger" />
+		<table className="table text-danger text-center table-borderless">
+		<tbody>
+			<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Birth year</th>
+			<th scope="col">Gender</th>
+			<th scope="col">Height</th>
+			<th scope="col">Skin Color</th>
+			<th scope="col">Eye Color</th>
+			</tr>
+			<tr>
+			<td>Luke Skywalker</td>
+			<td>19BBY</td>
+			<td>male</td>
+			<td>172</td>
+			<td>fair</td>
+			<td>blue</td>
+			</tr>
+		</tbody>
+		</table>
+		</div>
 		
 	);
 };

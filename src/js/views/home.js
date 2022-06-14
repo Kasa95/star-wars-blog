@@ -5,38 +5,24 @@ import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const {store, actions} = useContext(Context);
+
 	return (<>
-	<div className="container-fluid py-2">
+	<div className="container py-2">
 		<h2>Characters</h2>
 		<div className="row flex-row flex-nowrap">
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
+			{store.people.map((item,index)=><Card key={index} name={item.name} id={index+1} gender={item.gender} hairColor={item.hair_color} eyeColor={item.eye_color}/>)}
 		</div>
 	</div>
-		<div className="container-fluid py-2">
+		<div className="container py-2">
 		<h2>Planets</h2>
 		<div className="row flex-row flex-nowrap">
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
+			{store.planets.map((item,index)=><Card key={index} name={item.name} id={index+1} gender={item.gender} hairColor={item.hair_color} eyeColor={item.eye_color}/>)}
 		</div>
 	</div>
-		<div className="container-fluid py-2">
+		<div className="container py-2">
 		<h2>Starships</h2>
 		<div className="row flex-row flex-nowrap">
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
-			<Card/>
+			{store.starships.map((item,index)=><Card key={index} name={item.name} id={index+1} gender={item.gender} hairColor={item.hair_color} eyeColor={item.eye_color}/>)}
 		</div>
 	</div>
 	</>

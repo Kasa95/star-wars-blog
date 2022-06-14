@@ -1,12 +1,12 @@
 import React from "react";
 
-const Details = ()=> {
+const Details = (name)=> {
 return (
 <div className="container py-4">
   <div className="row">
     <img src="https://via.placeholder.com/800x600" alt="" className="col-6"/>
     <div className="col-6">
-      <h2 className="text-center">Luke Skywalker</h2>
+      <h2 className="text-center">{name}</h2>
       <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, modi sint minus repellat atque enim molestiae in non dolore mollitia blanditiis, corporis maxime repellendus magni, saepe asperiores commodi alias animi! Delectus, modi sint minus repellat atque enim molestiae in non dolore mollitia blanditiis, corporis maxime repellendus magni, saepe asperiores commodi alias animi!</p>
       </div>
   </div>
