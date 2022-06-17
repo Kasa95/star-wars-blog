@@ -7,7 +7,7 @@ import Details from "../component/Details.jsx";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
-	const [dataI, setDataI] = useState({})
+	const [onePeople, setOnePeople] = useState()
 
 	const {theid} = useParams();
 
@@ -15,16 +15,19 @@ export const Single = props => {
 		actions.getOnePeople(theid)
 	})
 
-	console.log({store});
+	var onePeopleProperties= (store.onePeople.properties);
+
+	console.log(store.onePeople.properties);
+
 	return (
 		
 		<div className="container py-4">
 		<div className="row">
 			<img src="https://via.placeholder.com/800x600" alt="" className="col-6"/>
 			<div className="col-6">
-			<h2 className="text-center">{store.dataI.result}</h2> 
+			<h2 className="text-center">a</h2> 
 			{/* seguir aquí */}
-			<p className="text-center">{store.dataI.description}</p>
+			<p className="text-center">{store.onePeople.description}</p>
 			</div>
 		</div>
 		<hr className="text-danger" />
