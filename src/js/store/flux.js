@@ -35,17 +35,17 @@ const getState = ({ getStore, getActions, setStore }) => {https://swapi.tech/api
 			},
 
 			getPeople: () => {
-				fetch("https://swapi.tech/api/people")
+				fetch("https://swapi.dev/api/people")
 				.then((response)=>response.json())
 				.then(data => setStore({people: data.results}))
 			},
 			getPlanets: () => {
-				fetch("https://swapi.tech/api/planets")
+				fetch("https://swapi.dev/api/planets")
 				.then((response)=>response.json())
 				.then(data => setStore({planets: data.results}))
 			},
 			getStarships: () => {
-				fetch("https://swapi.tech/api/starships")
+				fetch("https://swapi.dev/api/starships")
 				.then((response)=>response.json())
 				.then(data => setStore({starships: data.results}))
 			},
