@@ -1,13 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import NavLogo from "/src/img/NavLogo.png";
 import FavoriteItem from "./FavoriteItem.jsx";
+import { Context } from "../store/appContext.js";
 
 export const Navbar = () => {
+  
+  const {store, actions} = useContext(Context);
 
-  let favorites = [
-    "Luke", "C3PO", "Hoth", "Death Star"
-  ]
 
 	return (
 		<nav className="navbar navbar-dark bg-grey">
@@ -19,8 +19,8 @@ export const Navbar = () => {
           <a className="btn btn-outline-warning btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             Favorites
           </a>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              {favorites.map((item,index)=><FavoriteItem key={index} name={item} id={index+1}/>)}
+            <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+              {store.favorites.map((item,index)=><FavoriteItem key={index} name={item} id={index+1}/>)}
             </ul>
         </div>
       </div>

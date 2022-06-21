@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import Details from "../component/Details.jsx";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
@@ -25,12 +24,12 @@ export const Single = props => {
 		<div className="row">
 			<img src="https://via.placeholder.com/800x600" alt="" className="col-6"/>
 			<div className="col-6">
-			<h2 className="text-center">a</h2> 
+			<h2 className="text-center text-warning">a</h2> 
 			{/* seguir aquí */}
-			<p className="text-center">{store.onePeople.description}</p>
+			<p className="text-center text-warning">{store.onePeople.description}</p>
 			</div>
 		</div>
-		<hr className="text-danger" />
+		<hr className="text-danger text-warning" />
 		<table className="table text-danger text-center table-borderless">
 		<tbody>
 			<tr>

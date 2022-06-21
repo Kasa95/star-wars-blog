@@ -17,6 +17,9 @@ const getState = ({ getStore, getActions, setStore }) => {https://swapi.tech/api
 			planets: [],
 			starships: [],
 			onePeople: [],
+			favorites: [
+				"Luke", "C3PO", "Hoth", "Death Star"
+			]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -32,6 +35,11 @@ const getState = ({ getStore, getActions, setStore }) => {https://swapi.tech/api
 				fetch("https://swapi.tech/api/people/"+theid)
 				.then((response=>response.json()))
 				.then((data => setStore({onePeople: data.result})))
+			},
+
+			addFavorite: () => {
+				const store = getStore()
+				setStore({ favorites: [...store.favorites, "newFav"] })
 			},
 
 			getPeople: () => {
